@@ -5,4 +5,4 @@ for i in range(0, 100):
     if i == 89:
         print("{:d}".format(i))
     elif dig1 < dig2:
-        print("{:02d}".format(i), end= ", ")
+        print("{:02d}".format(i), end=", ")
