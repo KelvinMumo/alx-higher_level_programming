@@ -1,26 +1,16 @@
 #include <Python.h>
-
-/*
- * includes listobject.h
- * VIEW HEADER-> https://github.com/python/cpython/blob/master/Include/listobject.h
- * VIEW MANUAL-> https://docs.python.org/3.4/c-api/list.html
- * includes object.h
- * VIEW HEADER-> https://docs.python.org/3.4/c-api/structures.html)
- * VIEW MANUAL-> https://github.com/python/cpython/blob/master/Include/object.h
- * */
-
+#include <stdio.h>
+/**
+ * print_python_list_info - prints some basic info about Python lists
+ * @p: pointer to the Python struct
+ */
 void print_python_list_info(PyObject *p)
 {
-	Py_ssize_t size, alloc, idx;
+	unsigned int ind;
 
-	size = PyList_Size(p);
-	alloc = ((PyListObject *)p)->allocated;
-	printf("[*] Size of the Python List = %ld\n", size);
-	printf("[*] Allocated = %ld\n", alloc);
-	for (idx = 0; idx < size; idx++)
-	{
-		printf("Element %ld: %s\n",
-		       idx,
-		       (PY_TYPE(PyList_GetItem(p, idx)))->tp_name);
-	}
+	printf("[*] Size of the Python List = %lu\n", Py_SIZE(p));
+	printf("[*] Allocated = %lu\n", ((PyListObject *)p)->allocated);
+
+	for (ind = 0; ind < PyList_Size(p); ind++)
+		printf("Element %d: %s\n", ind, Py_TYPE(PyList_GetItem(p, ind))->tp_name);
 }
