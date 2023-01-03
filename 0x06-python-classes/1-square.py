@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+Module 1-square
+Defines class Square
+
+"""
 class Square:
     """
     Defines a class Square 
@@ -12,4 +17,4 @@ class Square:
             size: size of the square
 
         """
-        self.size = size
+        self.__size = size
