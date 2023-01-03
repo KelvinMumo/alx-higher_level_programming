@@ -2,8 +2,8 @@
 
 """
 Module 3-square
-Defines class Square with private attribute size and
-public attribute area
+Defines class Square with private attribute size and public attribute area
+
 """
 
 
@@ -27,10 +27,11 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = size
-     def area(self):
-     """
-     Calculates area of square
-     Returns: area
 
-     """
-     return (self.__size)**2
+     def area(self):
+         """
+         Calculates area of square
+         Returns: area
+
+         """
+         return (self.__size)**2
