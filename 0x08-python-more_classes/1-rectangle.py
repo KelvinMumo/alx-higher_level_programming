@@ -18,6 +18,10 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         """
         Initializes rectangles
+
+        Args:
+            width (int): width
+            height (int): height
         """
         self.width = width
         self.height=height
