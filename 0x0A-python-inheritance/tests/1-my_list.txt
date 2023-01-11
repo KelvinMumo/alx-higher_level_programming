@@ -64,40 +64,8 @@ Now use it:
     >>> my_list.print_sorted()
     Traceback (most recent call last):
           ...
-    AttributeError: 'list' object has no attribute 'print_sorted'
-
-    >>> my_list = list(range(1, 2))
-    >>> my_list.print_sorted()
-    Traceback (most recent call last):
-          ...
-    AttributeError: 'list' object has no attribute 'print_sorted'
-
-    >>> my_list = MyList()
-    >>> my_list.append(None)
+    AttributeError: 'list' o
     >>> print(my_list)
     [None]
     >>> my_list.print_sorted()
-    [None]'haceback (most recent call last):
-          ...
-    TypeError:my_list.append(None)
-    >>> print(my_list)
-    [1, 4, 2, 3, 5, -5, -3, 'holberton', None]
-
-    >>> issubclass(MyL    False
-
-    >>> type(my_list) == MyList
-    True
-
-    >>> my_list = MyList()
-    >>> my_list.append(0)
-    >>> print(my_list)
-    [0]
-    >>> my_list.append( ...
-    NameError: name 'NULL' is not defined
-
-    >>> my_list.append(int('inf'))
-    Traceback (most recent call last):
-          ...
-    ValueError: invalid literal for int() with base 10: 'inf'
-
-    >>> my_list.append(float(
+    [None]
